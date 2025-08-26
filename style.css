@@ -74,7 +74,6 @@ button:active {
      background-color: #364FC7;
 }
 
-/* NEW STYLE: Unique style for the Clear button */
 #clear-btn {
     background-color: #6c757d; /* A neutral gray */
 }
@@ -83,7 +82,6 @@ button:active {
     background-color: #5a6268;
 }
 
-/* NEW SECTION: Styles for the stats container */
 .stats-container {
     display: flex;
     justify-content: center;
@@ -125,6 +123,28 @@ button:active {
     line-height: 1.7;
     color: #495057;
 }
+
+/* NEW STYLES: FAQ Section */
+.faq-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-size: 18px;
+    color: #343a40;
+    margin-bottom: 8px;
+}
+
+.faq-item p {
+    margin-top: 0;
+}
+/* END NEW STYLES */
 
 .ad-placeholder-top, .ad-placeholder-bottom {
     background-color: #e9ecef;
