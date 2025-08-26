@@ -1,0 +1,128 @@
+/* The Upgraded style.css */
+body {
+    background-color: #f8f9fa; /* Lighter, cleaner background */
+    font-family: 'Inter', sans-serif; /* Our new professional font */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    color: #212529; /* Darker, more readable text */
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    color: #212529;
+    text-align: center;
+    font-weight: 700; /* Bolder heading */
+    margin-bottom: 30px;
+}
+
+.text-areas {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 8px; /* Softer corners */
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #4C6EF5;
+    box-shadow: 0 0 0 3px rgba(76, 110, 245, 0.25);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #4C6EF5; /* A nicer blue */
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #364FC7;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* --- Old Sections --- */
+.ad-placeholder-top, .ad-placeholder-bottom, .content-section {
+    margin-top: 40px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.content-section h2 {
+    color: #212529;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.content-section p {
+    line-height: 1.7;
+    color: #495057;
+}
+
+.ad-placeholder-top, .ad-placeholder-bottom {
+    background-color: #e9ecef;
+    color: #adb5bd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 0;
+    min-height: 90px;
+}
+
+.ad-placeholder-top {
+    min-height: 250px;
+}
+/* Add to the very bottom of style.css */
+#copy-toast {
+    position: fixed; /* Stays on screen even when you scroll */
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* This is how we center it perfectly */
+    background-color: #212529; /* Dark background */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    z-index: 1000;
+    opacity: 0; /* Hidden by default */
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#copy-toast.show {
+    opacity: 1;
+    visibility: visible;
+}

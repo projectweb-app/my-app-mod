@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comma to Line Converter - Free Online Text Formatter</title>
+    <meta name="description" content="Instantly convert comma-separated values to new lines, and vice versa. Our free, simple online tool is perfect for data and text formatting.">
+    <link rel="stylesheet" href="style.css">
+    <!-- In index.html, inside the <head> section -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Online Comma to Line Converter</h1>
+
+        <!-- MONETIZATION: Ad Placeholder 1 -->
+        <div class="ad-placeholder-top">
+            <p>Advertisement</p>
+        </div>
+
+        <div class="text-areas">
+            <textarea id="input-area" rows="10" placeholder="Paste your text here..."></textarea>
+            <textarea id="output-area" rows="10" placeholder="Your result will appear here..." readonly></textarea>
+        </div>
+
+        <div class="controls">
+            <button id="to-lines-btn">Convert to New Lines</button>
+            <button id="to-commas-btn">Convert to Commas</button>
+            <button id="copy-btn">Copy Result</button>
+        </div>
+
+        <!-- MONETIZATION: Ad Placeholder 2 -->
+        <div class="ad-placeholder-bottom">
+            <p>Advertisement</p>
+        </div>
+    </div>
+
+    <div class="content-section container">
+        <h2>How to Use the Comma to Line Converter</h2>
+        <p>
+            Simply paste your text into the input box. If your text is a list separated by commas (like: <strong>item 1, item 2, item 3</strong>), click the "Convert to New Lines" button. The tool will automatically place each item on its own line. If you have a list where each item is on a new line, click "Convert to Commas" to join them into a single, comma-separated line.
+        </p>
+
+        <h2>Why is a Text Formatter Useful?</h2>
+        <p>
+            Data often comes in messy formats. A list of items in an email might be separated by commas, but you might need it as a list in Excel or a Google Sheet, where each item needs to be in its own row. This tool saves you the time of manually editing your text. It's a simple solution for developers, data analysts, and anyone who needs to quickly clean up a list. Our text-to-list converter is fast, free, and works entirely in your browser.
+        </p>
+    </div>
+    <!-- In index.html, right before <script src="script.js"></script> -->
+<div id="copy-toast">Copied to clipboard!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
