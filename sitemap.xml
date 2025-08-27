@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main Pages -->
+  <url>
+    <loc>https://myappmod.com/</loc>
+    <lastmod>2025-08-26</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://myappmod.com/about.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://myappmod.com/contact.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://myappmod.com/legal/privacy.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <priority>0.80</priority>
+  </url>
+  
+  <!-- Blog Post -->
+  <url>
+    <loc>https://myappmod.com/blog/guide-to-cleaning-data-lists.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Tool Pages -->
+  <url>
+    <loc>https://myappmod.com/remove-duplicate-lines/</loc>
+    <lastmod>2025-08-26</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://myappmod.com/sort-lines-alphabetically/</loc>
+    <lastmod>2025-08-26</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://myappmod.com/comma-to-line/</loc>
+    <lastmod>2025-08-26</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://myappmod.com/case-converter/</loc>
+    <lastmod>2025-08-26</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://myappmod.com/add-prefix-suffix/</loc>
+    <lastmod>2025-08-26</lastmod>
+    <priority>0.90</priority>
+  </url>
+  
+</urlset>
