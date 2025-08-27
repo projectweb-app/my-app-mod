@@ -10,7 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     
-    <!-- IMPORTANT: Link to the correct CSS file in this folder -->
+    <!-- Link to global stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+    
+    <!-- Link to tool-specific stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -28,7 +31,6 @@
         </div>
 
         <div class="controls">
-            <!-- This is our main action button for this tool -->
             <button id="remove-duplicates-btn">Remove Duplicates</button>
             <button id="copy-btn">Copy Result</button>
             <button id="clear-btn">Clear</button>
@@ -58,7 +60,7 @@
     </div>
 
     <div id="copy-toast">Copied to clipboard!</div>
-    <!-- IMPORTANT: Link to the correct JS file in this folder -->
     <script src="script.js"></script>
+    <script src="../scripts/nav.js"></script> <!-- Add the navigation script -->
 </body>
 </html>

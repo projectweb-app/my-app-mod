@@ -1,0 +1,53 @@
+/* /style.css - Global Stylesheet */
+
+/* Basic body reset and font */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+/* --- Global Header --- */
+.global-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+  padding: 0 20px;
+  height: 60px;
+}
+
+.header-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.brand-logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #212529;
+  text-decoration: none;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #495057;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: #4C6EF5;
+}

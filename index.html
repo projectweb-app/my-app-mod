@@ -8,9 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to the global stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+
     <style>
-        body { background-color: #f8f9fa; font-family: 'Inter', sans-serif; text-align: center; padding: 40px 20px; color: #212529; }
-        .header { max-width: 700px; margin: 0 auto 40px auto; }
+        /* Homepage-specific styles */
+        body { text-align: center; padding: 40px 20px; }
+        .header { max-width: 700px; margin: 40px auto 40px auto; }
         .header h1 { font-size: 48px; font-weight: 700; margin-bottom: 10px; }
         .header p { font-size: 18px; color: #6c757d; }
         .tool-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
@@ -36,5 +41,8 @@
             <p>Clean your text by removing all duplicate lines, leaving you with a list of only the unique entries.</p>
         </a>
     </div>
+
+    <!-- Add the navigation script -->
+    <script src="/scripts/nav.js"></script>
 </body>
 </html>
