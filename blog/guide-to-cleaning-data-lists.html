@@ -6,8 +6,8 @@
     <title>The Ultimate Guide to Cleaning & Formatting Data Lists | MyAppMod</title>
     <meta name="description" content="Learn how to quickly clean, deduplicate, and reformat any text list. This guide shows you how to solve common data problems using fast, free online tools.">
     
-    <!-- Link to the new global stylesheet -->
-    <link rel="stylesheet" href="../style.css?v=1.2"> <!-- Version bumped to 1.2 -->
+    <!-- FIXED: Using absolute path starting with / -->
+    <link rel="stylesheet" href="/style.css?v=1.2">
 
     <!-- Styles specific to the blog article for better readability and button styling -->
     <style>
@@ -103,7 +103,14 @@
         <p>Cleaning data doesn't have to be a manual, frustrating process. By using the right tools, you can get your work done faster and with greater accuracy. Bookmark MyAppMod to have a fast, free, and privacy-respecting toolkit ready whenever you need it.</p>
     </main>
 
-    <!-- This script will inject the correctly styled header and footer -->
-    <script src="../scripts/nav.js"></script>
+    <!-- FIXED: Using absolute path starting with / -->
+    <script src="/scripts/nav.js"></script>
 </body>
-</html>
+</html>```
+
+### **Your Next Step**
+
+1.  Replace the code in your `/blog/guide-to-cleaning-data-lists.html` file with the final code above.
+2.  Push this one change to your GitHub repository.
+
+After you deploy this fix, the blog post page will correctly load the stylesheet and the script, and it will look just as beautiful as the rest of your website.
