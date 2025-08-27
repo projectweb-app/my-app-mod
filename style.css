@@ -1,4 +1,4 @@
-/* /style.css - NEW CREATIVE REDESIGN */
+/* /style.css - FINAL CREATIVE REDESIGN (v1.3) */
 
 /* --- 1. Design System: Colors, Fonts, and Variables --- */
 :root {
@@ -44,13 +44,7 @@ body {
   height: 100%;
 }
 
-.brand-logo {
-  font-weight: 700;
-  font-size: 1.3rem;
-  color: var(--text-dark);
-  text-decoration: none;
-}
-
+.brand-logo { font-weight: 700; font-size: 1.3rem; color: var(--text-dark); text-decoration: none; }
 .main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 25px; }
 .main-nav a { text-decoration: none; color: var(--text-light); font-size: 1rem; font-weight: 500; transition: color 0.2s ease; }
 .main-nav a:hover { color: var(--primary-blue); }
@@ -77,7 +71,7 @@ body {
 .tool-card:hover { transform: translateY(-6px); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); }
 .tool-card h2 { margin: 15px 0 10px 0; font-size: 1.25rem; color: var(--primary-blue); }
 .tool-card p { color: var(--text-light); font-size: 1rem; line-height: 1.6; margin: 0; }
-.tool-card .icon { color: var(--primary-blue); } /* Icon color */
+.tool-card .icon { color: var(--primary-blue); }
 
 /* --- 4. Unified Tool Page Styles --- */
 .tool-container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
@@ -106,7 +100,7 @@ body {
 
 textarea {
   padding: 10px;
-  border: 1px solid transparent; /* No border by default */
+  border: 1px solid transparent;
   border-radius: 6px;
   font-family: 'Menlo', 'Courier New', monospace;
   font-size: 1rem;
@@ -134,10 +128,29 @@ textarea:focus { outline: none; border-color: var(--primary-blue); box-shadow: 0
 .action-bar button#clear-btn { background-color: #6c757d; }
 .action-bar button#clear-btn:hover { background-color: #5a6268; }
 
-/* --- 5. Other Sections (Content, Footer, etc.) --- */
-.content-section { max-width: 900px; margin: 80px auto; text-align: left; line-height: 1.7; background-color: #fff; border: 1px solid var(--border-gray); border-radius: 12px; padding: 40px; box-shadow: 0 4px 15px var(--shadow-color); }
+/* --- 5. Content Section Styles --- */
+/* Default style for blog, privacy, etc. */
+.content-section {
+    max-width: 800px; /* Narrower for text-heavy pages */
+    margin: 80px auto;
+    text-align: left;
+    line-height: 1.7;
+    background-color: #fff;
+    border: 1px solid var(--border-gray);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+/* FIXED: Wider style for content sections that are part of a tool page */
+.tool-container .content-section {
+    max-width: 100%; /* Use the full width of the parent container */
+    padding: 0 20px; /* Match the tool container's padding */
+}
+
 .content-section h2 { border-bottom: 1px solid var(--border-gray); padding-bottom: 10px; margin-top: 0; margin-bottom: 20px; }
 
+/* --- 6. Footer and Other Elements --- */
 .site-footer {
     text-align: center;
     padding: 40px 20px;
