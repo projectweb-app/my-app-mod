@@ -15,28 +15,26 @@
         "name": "How does 'Title Case' work?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Our Title Case option capitalizes the first letter of every word in your text. This is commonly used for headlines and titles to ensure a consistent and professional look."
+          "text": "Our Title Case option capitalizes the first letter of every word in your text."
         }
       },{
         "@type": "Question",
         "name": "Will this tool change the case of file extensions or code?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. The tool applies the selected case conversion to all text you provide. It does not distinguish between regular words and specific formats like code or file extensions. Always review the output to ensure it meets your needs."
+          "text": "Yes. The tool applies the selected case conversion to all text you provide. Always review the output to ensure it meets your needs."
         }
       },{
         "@type": "Question",
         "name": "Why is consistent text case important?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Consistent text case is crucial for data analysis, sorting, and database management. To a computer, 'Data', 'data', and 'DATA' can be treated as different values. Standardizing the case ensures that your data is clean, accurate, and easy to process."
+          "text": "Consistent text case is crucial for data analysis and sorting. Standardizing the case ensures that your data is clean and accurate."
         }
       }]
     }
     </script>
-    <style>
-        .ad-placeholder { min-height: 90px; margin: 40px auto; text-align: center; }
-    </style>
+    <style> .ad-placeholder { min-height: 90px; margin: 40px auto; text-align: center; } </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H2GDP4SK09"></script>
     <script>
@@ -53,34 +51,70 @@
             <p>Instantly convert text to your desired case format.</p>
         </div>
 
-        <!-- START: TOP AD SLOT -->
         <div class="ad-placeholder">
             <!-- PASTE YOUR GOOGLE ADSENSE 'TOP BANNER' AD UNIT CODE HERE -->
             <p style="color: #adb5bd;">Your Top Ad Unit Will Appear Here</p>
         </div>
-        <!-- END: TOP AD SLOT -->
 
         <div class="tool-controls">
-            <!-- ... your tool controls ... -->
+            <input type="radio" id="uppercase" name="case" value="upper" checked>
+            <label for="uppercase">UPPERCASE</label>
+            <input type="radio" id="lowercase" name="case" value="lower">
+            <label for="lowercase">lowercase</label>
+            <input type="radio" id="titlecase" name="case" value="title">
+            <label for="titlecase">Title Case</label>
         </div>
         <div class="io-container">
-            <!-- ... your io-container ... -->
+            <div class="io-box">
+                <div class="io-header">
+                    <span>Input</span>
+                    <div class="stats" id="char-count">Characters: 0</div>
+                </div>
+                <textarea id="input-area" placeholder="Type or paste your text here..."></textarea>
+            </div>
+            <div class="io-box">
+                <div class="io-header">
+                    <span>Output</span>
+                    <div class="stats" id="word-count">Words: 0</div>
+                </div>
+                <textarea id="output-area" readonly placeholder="Converted text will appear here..."></textarea>
+            </div>
         </div>
         <div class="action-bar">
-            <!-- ... your action-bar ... -->
+            <button id="copy-btn">Copy Result</button>
+            <button id="clear-btn">Clear</button>
         </div>
     </main>
 
     <div class="content-section">
-        <!-- ... your content ... -->
+        <h2>About The Case Converter</h2>
+        <p>This <strong>online case converter</strong> is a tool for standardizing the capitalization of your text. It allows you to quickly <strong>change text case</strong> to UPPERCASE, lowercase, or Title Case.</p>
+        <h3>How to Use This Tool</h3>
+        <ol>
+            <li><strong>Paste Your Text:</strong> Place the text you want to convert into the "Input" area.</li>
+            <li><strong>Select a Case:</strong> Choose your desired format from the options above.</li>
+            <li><strong>See Instant Conversion:</strong> The text in the "Output" area will immediately update.</li>
+        </ol>
+        <hr style="margin: 30px 0; border: 0; border-top: 1px solid #e9ecef;">
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        <div class="faq-item" style="margin-bottom: 20px;">
+            <h3>How does "Title Case" work?</h3>
+            <p>Our Title Case option capitalizes the first letter of every word in your text.</p>
+        </div>
+        <div class="faq-item" style="margin-bottom: 20px;">
+            <h3>Will this tool change the case of file extensions or code?</h3>
+            <p><strong>Yes.</strong> The tool applies the selected case conversion to all text you provide. Always review the output.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Why is consistent text case important?</h3>
+            <p>Consistent text case is crucial for data analysis and sorting. Standardizing the case ensures your data is clean and accurate.</p>
+        </div>
     </div>
-
-    <!-- START: BOTTOM AD SLOT -->
+    
     <div class="ad-placeholder">
         <!-- PASTE YOUR GOOGLE ADSENSE 'BOTTOM BANNER' AD UNIT CODE HERE -->
         <p style="color: #adb5bd;">Your Bottom Ad Unit Will Appear Here</p>
     </div>
-    <!-- END: BOTTOM AD SLOT -->
     
     <div id="copy-toast">Copied to clipboard!</div>
     <script src="../scripts/nav.js"></script>

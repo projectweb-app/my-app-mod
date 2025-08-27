@@ -15,28 +15,26 @@
         "name": "Does this tool sort numbers correctly?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Our tool uses a 'natural sort' algorithm, which means it understands that 'Item 10' should come after 'Item 2', not before it. It correctly sorts lists that contain both text and numbers."
+          "text": "Yes. Our tool uses a 'natural sort' algorithm, which means it understands that 'Item 10' should come after 'Item 2', not before it."
         }
       },{
         "@type": "Question",
         "name": "Is there a limit to how many lines I can sort?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "For performance reasons, we recommend sorting lists up to 50,000 lines. The tool operates entirely within your browser, so performance depends on your computer's memory. For the vast majority of use cases, there is no effective limit."
+          "text": "For performance reasons, we recommend sorting lists up to 50,000 lines. The tool operates entirely within your browser."
         }
       },{
         "@type": "Question",
         "name": "How is this different from sorting in Excel or Google Sheets?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "While spreadsheet programs are powerful, our tool is built for speed and simplicity. You don't need to open a large application or select columns. Just paste your text, and the sorted result appears instantly, ready to be copied. It's a faster workflow for quick sorting tasks."
+          "text": "Our tool is built for speed and simplicity. Just paste your text, and the sorted result appears instantly, ready to be copied."
         }
       }]
     }
     </script>
-    <style>
-        .ad-placeholder { min-height: 90px; margin: 40px auto; text-align: center; }
-    </style>
+    <style> .ad-placeholder { min-height: 90px; margin: 40px auto; text-align: center; } </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H2GDP4SK09"></script>
     <script>
@@ -53,37 +51,72 @@
             <p>Instantly arrange lines of text in your desired order.</p>
         </div>
 
-        <!-- START: TOP AD SLOT -->
         <div class="ad-placeholder">
             <!-- PASTE YOUR GOOGLE ADSENSE 'TOP BANNER' AD UNIT CODE HERE -->
             <p style="color: #adb5bd;">Your Top Ad Unit Will Appear Here</p>
         </div>
-        <!-- END: TOP AD SLOT -->
 
         <div class="tool-controls">
-            <!-- ... your tool controls ... -->
+            <input type="radio" id="sort-az" name="sort-order" value="asc" checked>
+            <label for="sort-az">Sort A-Z (Ascending)</label>
+            <input type="radio" id="sort-za" name="sort-order" value="desc">
+            <label for="sort-za">Sort Z-A (Descending)</label>
         </div>
         <div class="io-container">
-            <!-- ... your io-container ... -->
+            <div class="io-box">
+                <div class="io-header">
+                    <span>Input</span>
+                    <div class="stats" id="input-stats">Lines: 0</div>
+                </div>
+                <textarea id="input-area" placeholder="Paste your list here to be sorted..."></textarea>
+            </div>
+            <div class="io-box">
+                <div class="io-header">
+                    <span>Output (Sorted)</span>
+                    <div class="stats" id="output-stats">Lines: 0</div>
+                </div>
+                <textarea id="output-area" readonly placeholder="Sorted lines will appear here..."></textarea>
+            </div>
         </div>
         <div class="action-bar">
-            <!-- ... your action-bar ... -->
+            <button id="copy-btn">Copy Result</button>
+            <button id="clear-btn">Clear</button>
         </div>
         <div id="next-step-container" class="next-step-container" style="display: none;">
-            <!-- ... your next-step-container ... -->
+            <h3>Next Step:</h3>
+            <a href="#" id="next-step-btn" class="next-step-btn"></a>
         </div>
     </main>
 
     <div class="content-section">
-        <!-- ... your content ... -->
+        <h2>About The Alphabetical Sorter</h2>
+        <p>This online <strong>text sorter</strong> allows you to instantly arrange any list of text into alphabetical or reverse-alphabetical order. The tool uses a "natural sort" method, ensuring that numbers within your text are sorted logically.</p>
+        <h3>How to Use This Tool</h3>
+        <ol>
+            <li><strong>Paste Your List:</strong> Copy your text and paste it into the "Input" text area.</li>
+            <li><strong>Select Sort Order:</strong> Choose between "Sort A-Z" (ascending) or "Sort Z-A" (descending).</li>
+            <li><strong>View Instant Results:</strong> The sorted list will appear in the "Output" text area in real-time.</li>
+        </ol>
+        <hr style="margin: 30px 0; border: 0; border-top: 1px solid #e9ecef;">
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        <div class="faq-item" style="margin-bottom: 20px;">
+            <h3>Does this tool sort numbers correctly?</h3>
+            <p><strong>Yes.</strong> Our tool uses a "natural sort" algorithm, which means it understands that "Item 10" should come after "Item 2".</p>
+        </div>
+        <div class="faq-item" style="margin-bottom: 20px;">
+            <h3>Is there a limit to how many lines I can sort?</h3>
+            <p>For performance reasons, we recommend sorting lists up to 50,000 lines. The tool operates entirely within your browser.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How is this different from sorting in Excel or Google Sheets?</h3>
+            <p>Our tool is built for speed and simplicity. Just paste your text, and the sorted result appears instantly.</p>
+        </div>
     </div>
 
-    <!-- START: BOTTOM AD SLOT -->
     <div class="ad-placeholder">
         <!-- PASTE YOUR GOOGLE ADSENSE 'BOTTOM BANNER' AD UNIT CODE HERE -->
         <p style="color: #adb5bd;">Your Bottom Ad Unit Will Appear Here</p>
     </div>
-    <!-- END: BOTTOM AD SLOT -->
 
     <div id="copy-toast">Copied to clipboard!</div>
     <script src="../scripts/nav.js"></script>

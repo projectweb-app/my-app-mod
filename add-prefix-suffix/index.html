@@ -15,28 +15,26 @@
         "name": "Can I add only a prefix or only a suffix?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. You can use either field independently. If you only want to add text to the beginning of each line, fill in the 'Prefix' field and leave the 'Suffix' field empty. If you only want to append text, do the opposite."
+          "text": "Yes. You can use either field independently. Fill in the 'Prefix' field to add text to the beginning, or the 'Suffix' field to add to the end."
         }
       },{
         "@type": "Question",
         "name": "How does the tool handle empty lines in my list?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The tool is designed to ignore empty lines. The prefix and suffix will only be added to lines that contain text, ensuring that your list formatting is preserved."
+          "text": "The tool is designed to ignore empty lines. The prefix and suffix will only be added to lines that contain text."
         }
       },{
         "@type": "Question",
         "name": "What is a common use case for this tool?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A very common use case is for developers or marketers to modify lists of URLs. For example, you can paste a list of slugs (e.g., 'about-us', 'contact') and add the domain ('https://example.com/') as a prefix to generate a full list of absolute URLs."
+          "text": "A common use case is modifying lists of URLs, for example, by adding the domain ('https://example.com/') as a prefix to a list of page slugs."
         }
       }]
     }
     </script>
-    <style>
-        .ad-placeholder { min-height: 90px; margin: 40px auto; text-align: center; }
-    </style>
+    <style> .ad-placeholder { min-height: 90px; margin: 40px auto; text-align: center; } </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H2GDP4SK09"></script>
     <script>
@@ -52,35 +50,73 @@
             <h1>Add Prefix & Suffix to Lines</h1>
             <p>Add custom text to the beginning or end of every line in your list.</p>
         </div>
-
-        <!-- START: TOP AD SLOT -->
+        
         <div class="ad-placeholder">
             <!-- PASTE YOUR GOOGLE ADSENSE 'TOP BANNER' AD UNIT CODE HERE -->
             <p style="color: #adb5bd;">Your Top Ad Unit Will Appear Here</p>
         </div>
-        <!-- END: TOP AD SLOT -->
         
         <div class="ps-controls">
-            <!-- ... your ps-controls ... -->
+            <div class="ps-input-group">
+                <label for="prefix-input">Prefix (Add to beginning)</label>
+                <input type="text" id="prefix-input" placeholder="e.g. https://">
+            </div>
+            <div class="ps-input-group">
+                <label for="suffix-input">Suffix (Add to end)</label>
+                <input type="text" id="suffix-input" placeholder="e.g. .com">
+            </div>
         </div>
         <div class="io-container">
-            <!-- ... your io-container ... -->
+            <div class="io-box">
+                <div class="io-header">
+                    <span>Input</span>
+                    <div class="stats" id="input-stats">Lines: 0</div>
+                </div>
+                <textarea id="input-area" placeholder="your-domain-1&#10;your-domain-2&#10;your-domain-3"></textarea>
+            </div>
+            <div class="io-box">
+                <div class="io-header">
+                    <span>Output</span>
+                    <div class="stats" id="output-stats">Lines: 0</div>
+                </div>
+                <textarea id="output-area" readonly placeholder="Result will appear here..."></textarea>
+            </div>
         </div>
         <div class="action-bar">
-            <!-- ... your action-bar ... -->
+            <button id="copy-btn">Copy Result</button>
+            <button id="clear-btn">Clear</button>
         </div>
     </main>
 
     <div class="content-section">
-        <!-- ... your content ... -->
+        <h2>About The Prefix & Suffix Tool</h2>
+        <p>This tool allows you to <strong>add custom text to the beginning (prepend) or end (append) of every line</strong> in your list. It's a massive time-saver for formatting lists of URLs, product codes, or any other data that requires a uniform prefix or suffix.</p>
+        <h3>How to Use This Tool</h3>
+        <ol>
+            <li><strong>Enter Prefix/Suffix:</strong> Type the text you want to add in the "Prefix" and/or "Suffix" fields.</li>
+            <li><strong>Paste Your List:</strong> Paste your list into the "Input" area.</li>
+            <li><strong>Get Real-Time Results:</strong> The "Output" area will instantly show your modified list.</li>
+        </ol>
+        <hr style="margin: 30px 0; border: 0; border-top: 1px solid #e9ecef;">
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        <div class="faq-item" style="margin-bottom: 20px;">
+            <h3>Can I add only a prefix or only a suffix?</h3>
+            <p><strong>Yes.</strong> You can use either field independently. Fill in the 'Prefix' field to add text to the beginning, or the 'Suffix' field to add to the end.</p>
+        </div>
+        <div class="faq-item" style="margin-bottom: 20px;">
+            <h3>How does the tool handle empty lines in my list?</h3>
+            <p>The tool is designed to ignore empty lines. The prefix and suffix will only be added to lines that contain text.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What is a common use case for this tool?</h3>
+            <p>A common use case is modifying lists of URLs, for example, by adding the domain ("https://example.com/") as a prefix to a list of page slugs.</p>
+        </div>
     </div>
 
-    <!-- START: BOTTOM AD SLOT -->
     <div class="ad-placeholder">
         <!-- PASTE YOUR GOOGLE ADSENSE 'BOTTOM BANNER' AD UNIT CODE HERE -->
         <p style="color: #adb5bd;">Your Bottom Ad Unit Will Appear Here</p>
     </div>
-    <!-- END: BOTTOM AD SLOT -->
 
     <div id="copy-toast">Copied to clipboard!</div>
     <script src="../scripts/nav.js"></script>
