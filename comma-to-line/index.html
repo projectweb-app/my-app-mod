@@ -57,4 +57,70 @@
         <div class="tool-controls">
             <input type="radio" id="to-lines" name="conversion" value="to-lines" checked>
             <label for="to-lines">Comma → New Lines</label>
-            <input type="radio" id="to-commas" name="conver
+            <input type="radio" id="to-commas" name="conversion" value="to-commas">
+            <label for="to-commas">New Lines → Commas</label>
+        </div>
+        <div class="io-container">
+            <div class="io-box">
+                <div class="io-header">
+                    <span>Input</span>
+                    <div class="stats" id="input-stats">Items: 0</div>
+                </div>
+                <textarea id="input-area" placeholder="item 1, item 2, item 3..."></textarea>
+            </div>
+            <div class="io-box">
+                <div class="io-header">
+                    <span>Output</span>
+                    <div class="stats" id="output-stats">Items: 0</div>
+                </div>
+                <textarea id="output-area" readonly placeholder="Your result appears here..."></textarea>
+            </div>
+        </div>
+        <div class="action-bar">
+            <button id="copy-btn">Copy Result</button>
+            <button id="clear-btn">Clear</button>
+        </div>
+        <div id="next-step-container" class="next-step-container" style="display: none;">
+            <h3>Next Step:</h3>
+            <a href="#" id="next-step-btn" class="next-step-btn"></a>
+        </div>
+    </main>
+    
+    <div class="content-section">
+        <h2>About The Comma to Line Converter</h2>
+        <p>This tool is a simple text formatter that helps you switch between two common list formats: <strong>comma-separated</strong> and <strong>multi-line</strong>. It's perfect for cleaning up data copied from emails or websites so it can be easily pasted into a spreadsheet, or for preparing a column of data for use in a text field that requires commas.</p>
+        
+        <h3>How to Use This Tool</h3>
+        <ol>
+            <li><strong>Paste Your Text:</strong> Paste your list into the "Input" area.</li>
+            <li><strong>Choose Conversion Direction:</strong>
+                <ul>
+                    <li>Select <strong>"Comma → New Lines"</strong> if your input is <code>item 1, item 2, item 3</code>.</li>
+                    <li>Select <strong>"New Lines → Commas"</strong> if your input is a list with one item per line.</li>
+                </ul>
+            </li>
+            <li><strong>Get Your Formatted List:</strong> The correctly formatted list will appear instantly in the "Output" area.</li>
+        </ol>
+
+        <hr style="margin: 30px 0; border: 0; border-top: 1px solid #e9ecef;">
+
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        <div class="faq-item" style="margin-bottom: 20px;">
+            <h3>How does the tool handle extra spaces?</h3>
+            <p>The tool automatically trims any leading or trailing whitespace from each item during the conversion process. This ensures your final list is clean and properly formatted, without any unwanted spaces.</p>
+        </div>
+        <div class="faq-item" style="margin-bottom: 20px;">
+            <h3>Can I convert a list separated by a different character, like a semicolon?</h3>
+            <p>Currently, this tool is specifically optimized for converting between commas and new lines. We are developing more advanced tools that will allow for custom delimiters.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What is a "comma-separated list"?</h3>
+            <p>A comma-separated list, often part of a CSV (Comma-Separated Values) file, is a simple text format for storing data in a table-like structure. Each item is separated by a comma. It's a very common format for exporting and importing data from spreadsheets and databases.</p>
+        </div>
+    </div>
+
+    <div id="copy-toast">Copied to clipboard!</div>
+    <script src="../scripts/nav.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
