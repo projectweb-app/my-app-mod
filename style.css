@@ -51,3 +51,9 @@ body {
 .main-nav a:hover {
   color: #4C6EF5;
 }
+/* Add this to the end of /style.css */
+
+.main-nav a.active-link {
+  color: #4C6EF5;
+  font-weight: 700;
+}

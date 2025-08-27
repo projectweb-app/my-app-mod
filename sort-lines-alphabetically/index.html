@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Lines Alphabetically - Free Online Text Sorter | MyAppMod</title>
+    <meta name="description" content="Quickly sort any list of text lines alphabetically (A-Z) or reverse-alphabetically (Z-A) with our simple, free online tool. No registration required.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to global and tool-specific stylesheets -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Sort Lines Alphabetically</h1>
+
+        <div class="text-areas">
+            <textarea id="input-area" rows="10" placeholder="Paste your list here to be sorted..."></textarea>
+            <textarea id="output-area" rows="10" placeholder="Sorted lines will appear here..." readonly></textarea>
+        </div>
+
+        <div class="controls">
+            <button id="sort-az-btn">Sort A-Z (Ascending)</button>
+            <button id="sort-za-btn">Sort Z-A (Descending)</button>
+            <button id="copy-btn">Copy Result</button>
+            <button id="clear-btn">Clear</button>
+        </div>
+
+        <div class="stats-container">
+            <span>Word Count: <strong id="word-count">0</strong></span>
+            <span>Character Count: <strong id="char-count">0</strong></span>
+            <span>Line Count: <strong id="line-count">0</strong></span>
+        </div>
+    </div>
+
+    <div class="content-section container">
+        <h2>How to Sort Your List</h2>
+        <p>
+            Paste any list of text into the input box. Click "Sort A-Z" to arrange the lines in standard alphabetical order. Click "Sort Z-A" to arrange them in reverse-alphabetical order. The sorted list will instantly appear in the output box, ready to be copied.
+        </p>
+    </div>
+
+    <div id="copy-toast">Copied to clipboard!</div>
+    
+    <!-- Link to the main navigation script and the tool's specific logic script -->
+    <script src="../scripts/nav.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

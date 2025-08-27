@@ -9,17 +9,37 @@ const headerTemplate = `
         <ul>
           <li><a href="/comma-to-line/">Comma to Line Converter</a></li>
           <li><a href="/remove-duplicate-lines/">Remove Duplicate Lines</a></li>
+          <li><a href="/sort-lines-alphabetically/">Sort Lines Alphabetically</a></li>
         </ul>
       </nav>
     </div>
   </header>
 `;
 
-// Function to inject the header at the top of the body
+// Function to inject the header
 function loadHeader() {
-  // Use document.body.insertAdjacentHTML for efficient injection
   document.body.insertAdjacentHTML('afterbegin', headerTemplate);
 }
 
-// Run the function as soon as the DOM content is loaded
-document.addEventListener('DOMContentLoaded', loadHeader);
+// **NEW** Function to highlight the active page link
+function highlightActiveLink() {
+  const currentPagePath = window.location.pathname;
+  const navLinks = document.querySelectorAll('.main-nav a');
+
+  navLinks.forEach(link => {
+    // Use getAttribute to get the exact href value
+    const linkPath = link.getAttribute('href');
+    
+    // Check if the current page's path starts with the link's path
+    // This handles cases like `/comma-to-line/` matching the link `/comma-to-line/`
+    if (currentPagePath === linkPath) {
+      link.classList.add('active-link');
+    }
+  });
+}
+
+// Run the functions as soon as the DOM content is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  loadHeader();
+  highlightActiveLink(); // Call the new function after the header is loaded
+});
