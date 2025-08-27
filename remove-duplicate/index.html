@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Duplicate Lines - Free Online Text Tool | MyAppMod</title>
+    <meta name="description" content="Quickly and easily remove all duplicate lines from your text or list. Our free online tool cleans your data instantly, keeping only the unique lines.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- IMPORTANT: Link to the correct CSS file in this folder -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Remove Duplicate Lines</h1>
+
+        <div class="ad-placeholder-top">
+            <p>Advertisement</p>
+        </div>
+
+        <div class="text-areas">
+            <textarea id="input-area" rows="10" placeholder="Paste your list here..."></textarea>
+            <textarea id="output-area" rows="10" placeholder="Unique lines will appear here..." readonly></textarea>
+        </div>
+
+        <div class="controls">
+            <!-- This is our main action button for this tool -->
+            <button id="remove-duplicates-btn">Remove Duplicates</button>
+            <button id="copy-btn">Copy Result</button>
+            <button id="clear-btn">Clear</button>
+        </div>
+
+        <div class="stats-container">
+            <span>Word Count: <strong id="word-count">0</strong></span>
+            <span>Character Count: <strong id="char-count">0</strong></span>
+            <span>Line Count: <strong id="line-count">0</strong></span>
+        </div>
+
+        <div class="ad-placeholder-bottom">
+            <p>Advertisement</p>
+        </div>
+    </div>
+
+    <div class="content-section container">
+        <h2>How to Remove Duplicate Lines</h2>
+        <p>
+            Simply paste your text into the input box on the left. The tool will automatically process your text and remove any lines that are exact duplicates of a previous line. The cleaned list, containing only unique lines, will appear in the output box on the right.
+        </p>
+
+        <h2>Why Remove Duplicates?</h2>
+        <p>
+            Duplicate data can cause major problems. Whether you're managing email lists, keyword lists for SEO, or just cleaning up notes, duplicate entries can skew your numbers and waste your time. This tool ensures that every line in your list is unique, making your data clean, accurate, and ready for use.
+        </p>
+    </div>
+
+    <div id="copy-toast">Copied to clipboard!</div>
+    <!-- IMPORTANT: Link to the correct JS file in this folder -->
+    <script src="script.js"></script>
+</body>
+</html>
