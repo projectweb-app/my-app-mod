@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Converter - UPPERCASE, lowercase, etc. | MyAppMod</title>
+    <meta name="description" content="Easily convert text between UPPERCASE, lowercase, and Title Case. Our free online tool transforms your text instantly as you type.">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <main class="tool-container">
+        <div class="tool-header">
+            <h1>Case Converter</h1>
+            <p>Instantly convert text to your desired case format.</p>
+        </div>
+
+        <div class="tool-controls">
+            <input type="radio" id="uppercase" name="case" value="upper" checked>
+            <label for="uppercase">UPPERCASE</label>
+            <input type="radio" id="lowercase" name="case" value="lower">
+            <label for="lowercase">lowercase</label>
+            <input type="radio" id="titlecase" name="case" value="title">
+            <label for="titlecase">Title Case</label>
+        </div>
+
+        <div class="io-container">
+            <div class="io-box">
+                <div class="io-header">
+                    <span>Input</span>
+                    <div class="stats" id="char-count">Characters: 0</div>
+                </div>
+                <textarea id="input-area" placeholder="Type or paste your text here..."></textarea>
+            </div>
+            <div class="io-box">
+                <div class="io-header">
+                    <span>Output</span>
+                    <div class="stats" id="word-count">Words: 0</div>
+                </div>
+                <textarea id="output-area" readonly placeholder="Converted text will appear here..."></textarea>
+            </div>
+        </div>
+
+        <div class="action-bar">
+            <button id="copy-btn">Copy Result</button>
+            <button id="clear-btn">Clear</button>
+        </div>
+    </main>
+    
+    <div id="copy-toast">Copied to clipboard!</div>
+    <script src="../scripts/nav.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

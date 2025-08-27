@@ -5,133 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comma to Line Converter - Free Online Text Formatter | MyAppMod</title>
     <meta name="description" content="Instantly convert comma-separated values to new lines, and vice versa. Our free, simple online tool is perfect for data and text formatting.">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- Link to global stylesheet -->
     <link rel="stylesheet" href="../style.css">
-    
-    <!-- Link to tool-specific stylesheet -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- SEO OPTIMIZATION: Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "SoftwareApplication",
-          "name": "Online Comma to Line Converter",
-          "operatingSystem": "Any (Web-based)",
-          "applicationCategory": "TextProcessingTool",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "ratingCount": "885"
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-          }
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Is my data safe to use on this tool?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, 100% safe. Our tool is a purely client-side application, which means all the conversion logic runs directly in your web browser. No data you paste into the input box is ever sent to our servers. Your privacy is guaranteed."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What is a comma-separated value (CSV)?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "CSV stands for 'Comma-Separated Values.' It is a very common text file format used to store tabular data, like in a spreadsheet or database. Each line in the file is a data record, and each record consists of one or more fields, separated by commas. Our tool is perfect for handling simple CSV data."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can I use a different delimiter besides a comma?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Currently, this tool is optimized specifically for converting between commas and new lines. We are developing a new 'Custom Delimiter' tool that will allow you to use other characters like semicolons (;), tabs, or pipes (|). Stay tuned for more tools from MyAppMod!"
-              }
-            }
-          ]
-        }
-      ]
-    }
-    </script>
 </head>
 <body>
-
-    <div class="container">
-        <h1>Online Comma to Line Converter</h1>
-
-        <div class="ad-placeholder-top">
-            <p>Advertisement</p>
+    <main class="tool-container">
+        <div class="tool-header">
+            <h1>Comma to Line Converter</h1>
+            <p>Instantly reformat your list. Choose a conversion direction below.</p>
         </div>
 
-        <div class="text-areas">
-            <textarea id="input-area" rows="10" placeholder="Paste your text here..."></textarea>
-            <textarea id="output-area" rows="10" placeholder="Your result will appear here..." readonly></textarea>
+        <div class="tool-controls">
+            <input type="radio" id="to-lines" name="conversion" value="to-lines" checked>
+            <label for="to-lines">Comma → New Lines</label>
+            <input type="radio" id="to-commas" name="conversion" value="to-commas">
+            <label for="to-commas">New Lines → Commas</label>
         </div>
 
-        <div class="controls">
-            <button id="to-lines-btn">Convert to New Lines</button>
-            <button id="to-commas-btn">Convert to Commas</button>
+        <div class="io-container">
+            <div class="io-box">
+                <div class="io-header">
+                    <span>Input</span>
+                    <div class="stats" id="input-stats">Items: 0</div>
+                </div>
+                <textarea id="input-area" placeholder="item 1, item 2, item 3..."></textarea>
+            </div>
+            <div class="io-box">
+                <div class="io-header">
+                    <span>Output</span>
+                    <div class="stats" id="output-stats">Items: 0</div>
+                </div>
+                <textarea id="output-area" readonly placeholder="Your result appears here..."></textarea>
+            </div>
+        </div>
+        
+        <div class="action-bar">
             <button id="copy-btn">Copy Result</button>
             <button id="clear-btn">Clear</button>
         </div>
 
-        <div class="stats-container">
-            <span>Word Count: <strong id="word-count">0</strong></span>
-            <span>Character Count: <strong id="char-count">0</strong></span>
-            <span>Line Count: <strong id="line-count">0</strong></span>
+        <div id="next-step-container" class="next-step-container" style="display: none;">
+            <h3>Next Step:</h3>
+            <a href="#" id="next-step-btn" class="next-step-btn"></a>
         </div>
+    </main>
 
-        <div class="ad-placeholder-bottom">
-            <p>Advertisement</p>
-        </div>
-    </div>
-
-    <div class="content-section container">
-        <h2>How to Use the Comma to Line Converter</h2>
-        <p>
-            Simply paste your text into the input box. If your text is a list separated by commas (like: <strong>item 1, item 2, item 3</strong>), click the "Convert to New Lines" button. The tool will automatically place each item on its own line. If you have a list where each item is on a new line, click "Convert to Commas" to join them into a single, comma-separated line.
-        </p>
-
-        <h2>Why is a Text Formatter Useful?</h2>
-        <p>
-            Data often comes in messy formats. A list of items in an email might be separated by commas, but you might need it as a list in Excel or a Google Sheet, where each item needs to be in its own row. This tool saves you the time of manually editing your text. It's a simple solution for developers, data analysts, and anyone who needs to quickly clean up a list. Our text-to-list converter is fast, free, and works entirely in your browser.
-        </p>
-
-        <div class="faq-section">
-            <h2>Frequently Asked Questions (FAQ)</h2>
-            <div class="faq-item">
-                <h3>Is my data safe to use on this tool?</h3>
-                <p><strong>Yes, 100% safe.</strong> Our tool is a purely client-side application, which means all the conversion logic runs directly in your web browser. No data you paste into the input box is ever sent to our servers. Your privacy is guaranteed.</p>
-            </div>
-            <div class="faq-item">
-                <h3>What is a comma-separated value (CSV)?</h3>
-                <p>CSV stands for "Comma-Separated Values." It is a very common text file format used to store tabular data, like in a spreadsheet or database. Each line in the file is a data record, and each record consists of one or more fields, separated by commas. Our tool is perfect for handling simple CSV data.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Can I use a different delimiter besides a comma?</h3>
-                <p>Currently, this tool is optimized specifically for converting between commas and new lines. We are developing a new "Custom Delimiter" tool that will allow you to use other characters like semicolons (`;`), tabs, or pipes (`|`). Stay tuned for more tools from MyAppMod!</p>
-            </div>
-        </div>
+    <div class="content-section">
+        <h2>Live Conversion</h2>
+        <p>This tool works in real-time. Simply paste your text and select a conversion direction. The output is updated instantly, saving you time and clicks.</p>
     </div>
 
     <div id="copy-toast">Copied to clipboard!</div>
+    <script src="../scripts/nav.js"></script>
     <script src="script.js"></script>
-    <script src="../scripts/nav.js"></script> <!-- Add the navigation script -->
 </body>
-</html>
+</html>```
+
+*   **File: `/comma-to-line/script.js`**
+
+```javascript
+document.addEventListener('DOMContentLoaded', () => {
+    const inputArea = document.getElementById('input-area');
+    const outputArea = document.getElementById('output-area');
+    const conversionControls = document.querySelectorAll('input[name="conversion"]');
+    const inputStats = document.getElementById('input-stats');
+    const outputStats = document.getElementById('output-stats');
+    const clearBtn = document.getElementById('clear-btn');
+    const copyBtn = document.getElementById('copy-btn');
+    const nextStepContainer = document.getElementById('next-step-container');
+    const nextStepBtn = document.getElementById('next-step-btn');
+
+    const processText = () => {
+        const mode = document.querySelector('input[name="conversion"]:checked').value;
+        const text = inputArea.value;
+        let inputItems = [];
+        let outputItems = [];
+
+        if (mode === 'to-lines') {
+            inputItems = text.split(',').map(item => item.trim()).filter(Boolean);
+            outputItems = inputItems;
+            outputArea.value = outputItems.join('\n');
+            inputArea.placeholder = 'item 1, item 2, item 3...';
+        } else {
+            inputItems = text.split('\n').map(item => item.trim()).filter(Boolean);
+            outputItems = inputItems;
+            outputArea.value = outputItems.join(', ');
+            inputArea.placeholder = 'item 1\nitem 2\nitem 3...';
+        }
+
+        inputStats.textContent = `Items: ${inputItems.length}`;
+        outputStats.textContent = `Items: ${outputItems.length}`;
+        toggleNextStep(outputItems.length > 0);
+    };
+
+    const toggleNextStep = (show) => {
+        if (show) {
+            nextStepBtn.textContent = 'Remove duplicate items from this list';
+            const data = encodeURIComponent(outputArea.value);
+            nextStepBtn.href = `../remove-duplicate-lines/?data=${data}`;
+            nextStepContainer.style.display = 'block';
+        } else {
+            nextStepContainer.style.display = 'none';
+        }
+    };
+
+    inputArea.addEventListener('input', processText);
+    conversionControls.forEach(radio => radio.addEventListener('change', processText));
+
+    clearBtn.addEventListener('click', () => {
+        inputArea.value = '';
+        processText();
+    });
+
+    copyBtn.addEventListener('click', () => {
+        if (!outputArea.value) return;
+        navigator.clipboard.writeText(outputArea.value).then(() => {
+            const copyToast = document.getElementById('copy-toast');
+            copyToast.classList.add('show');
+            setTimeout(() => copyToast.classList.remove('show'), 2000);
+        });
+    });
+    
+    processText(); // Initial run
+});

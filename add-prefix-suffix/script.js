@@ -1,42 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
     const inputArea = document.getElementById('input-area');
     const outputArea = document.getElementById('output-area');
-    const sortControls = document.querySelectorAll('input[name="sort-order"]');
+    const prefixInput = document.getElementById('prefix-input');
+    const suffixInput = document.getElementById('suffix-input');
     const inputStats = document.getElementById('input-stats');
     const outputStats = document.getElementById('output-stats');
     const clearBtn = document.getElementById('clear-btn');
     const copyBtn = document.getElementById('copy-btn');
-    const nextStepContainer = document.getElementById('next-step-container');
-    const nextStepBtn = document.getElementById('next-step-btn');
-
+    
     const processText = () => {
-        const order = document.querySelector('input[name="sort-order"]:checked').value;
+        const prefix = prefixInput.value;
+        const suffix = suffixInput.value;
         const lines = inputArea.value.split('\n');
-        
-        // Use localeCompare for smarter sorting of numbers and letters
-        lines.sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
 
-        if (order === 'desc') {
-            lines.reverse();
-        }
-
-        outputArea.value = lines.join('\n');
+        const modifiedLines = lines.map(line => {
+            if (line.trim() === '') return ''; // Keep empty lines if they exist
+            return `${prefix}${line}${suffix}`;
+        });
         
-        const lineCount = lines.filter(Boolean).length;
+        outputArea.value = modifiedLines.join('\n');
+        
+        const lineCount = lines.filter(line => line.trim() !== '').length;
         inputStats.textContent = `Lines: ${lineCount}`;
         outputStats.textContent = `Lines: ${lineCount}`;
-        toggleNextStep(lineCount > 0);
-    };
-
-    const toggleNextStep = (show) => {
-        if (show) {
-            nextStepBtn.textContent = 'Remove duplicate lines from this list';
-            const data = encodeURIComponent(outputArea.value);
-            nextStepBtn.href = `../remove-duplicate-lines/?data=${data}`;
-            nextStepContainer.style.display = 'block';
-        } else {
-            nextStepContainer.style.display = 'none';
-        }
     };
 
     const checkURLParams = () => {
@@ -49,10 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     inputArea.addEventListener('input', processText);
-    sortControls.forEach(radio => radio.addEventListener('change', processText));
-    
+    prefixInput.addEventListener('input', processText);
+    suffixInput.addEventListener('input', processText);
+
     clearBtn.addEventListener('click', () => {
         inputArea.value = '';
+        prefixInput.value = '';
+        suffixInput.value = '';
         processText();
     });
 
@@ -65,5 +54,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    checkURLParams(); // Check for incoming data on page load
+    checkURLParams();
 });

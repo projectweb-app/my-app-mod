@@ -4,50 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sort Lines Alphabetically - Free Online Text Sorter | MyAppMod</title>
-    <meta name="description" content="Quickly sort any list of text lines alphabetically (A-Z) or reverse-alphabetically (Z-A) with our simple, free online tool. No registration required.">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- Link to global and tool-specific stylesheets -->
+    <meta name="description" content="Quickly sort any list of text lines alphabetically (A-Z) or reverse-alphabetically (Z-A) with our simple, free online tool.">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="container">
-        <h1>Sort Lines Alphabetically</h1>
-
-        <div class="text-areas">
-            <textarea id="input-area" rows="10" placeholder="Paste your list here to be sorted..."></textarea>
-            <textarea id="output-area" rows="10" placeholder="Sorted lines will appear here..." readonly></textarea>
+    <main class="tool-container">
+        <div class="tool-header">
+            <h1>Sort Lines Alphabetically</h1>
+            <p>Instantly arrange lines of text in your desired order.</p>
         </div>
 
-        <div class="controls">
-            <button id="sort-az-btn">Sort A-Z (Ascending)</button>
-            <button id="sort-za-btn">Sort Z-A (Descending)</button>
+        <div class="tool-controls">
+            <input type="radio" id="sort-az" name="sort-order" value="asc" checked>
+            <label for="sort-az">Sort A-Z (Ascending)</label>
+            <input type="radio" id="sort-za" name="sort-order" value="desc">
+            <label for="sort-za">Sort Z-A (Descending)</label>
+        </div>
+
+        <div class="io-container">
+            <div class="io-box">
+                <div class="io-header">
+                    <span>Input</span>
+                    <div class="stats" id="input-stats">Lines: 0</div>
+                </div>
+                <textarea id="input-area" placeholder="Paste your list here to be sorted..."></textarea>
+            </div>
+            <div class="io-box">
+                <div class="io-header">
+                    <span>Output (Sorted)</span>
+                    <div class="stats" id="output-stats">Lines: 0</div>
+                </div>
+                <textarea id="output-area" readonly placeholder="Sorted lines will appear here..."></textarea>
+            </div>
+        </div>
+
+        <div class="action-bar">
             <button id="copy-btn">Copy Result</button>
             <button id="clear-btn">Clear</button>
         </div>
-
-        <div class="stats-container">
-            <span>Word Count: <strong id="word-count">0</strong></span>
-            <span>Character Count: <strong id="char-count">0</strong></span>
-            <span>Line Count: <strong id="line-count">0</strong></span>
+        
+        <div id="next-step-container" class="next-step-container" style="display: none;">
+            <h3>Next Step:</h3>
+            <a href="#" id="next-step-btn" class="next-step-btn"></a>
         </div>
-    </div>
+    </main>
 
-    <div class="content-section container">
-        <h2>How to Sort Your List</h2>
-        <p>
-            Paste any list of text into the input box. Click "Sort A-Z" to arrange the lines in standard alphabetical order. Click "Sort Z-A" to arrange them in reverse-alphabetical order. The sorted list will instantly appear in the output box, ready to be copied.
-        </p>
+    <div class="content-section">
+        <h2>Real-Time Sorting</h2>
+        <p>This tool sorts your list as you type. Choose your desired order (A-Z or Z-A), and the output will update automatically. This is especially useful for quickly organizing keyword lists, names, or any other line-based data.</p>
     </div>
 
     <div id="copy-toast">Copied to clipboard!</div>
-    
-    <!-- Link to the main navigation script and the tool's specific logic script -->
     <script src="../scripts/nav.js"></script>
     <script src="script.js"></script>
 </body>
