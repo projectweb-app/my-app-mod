@@ -3,18 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sort Lines Alphabetically - Free Online Text Sorter | MyAppMod</title>
-    <meta name="description" content="Quickly sort any list of text lines alphabetically (A-Z) or reverse-alphabetically (Z-A) with our simple, free online tool.">
-    <!-- Updated CSS Link Below -->
+    <!-- SEO Optimized Meta Tags -->
+    <title>Sort Lines Alphabetically Online - Free Text Sorter | MyAppMod</title>
+    <meta name="description" content="Instantly sort any list of text lines in alphabetical (A-Z) or reverse-alphabetical (Z-A) order. Our free online text sorter handles numbers and text correctly (natural sort).">
+    
     <link rel="stylesheet" href="../style.css?v=1.1">
+
+    <!-- FAQPage Schema for SEO Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Does this tool sort numbers correctly?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Our tool uses a 'natural sort' algorithm, which means it understands that 'Item 10' should come after 'Item 2', not before it. It correctly sorts lists that contain both text and numbers."
+        }
+      },{
+        "@type": "Question",
+        "name": "Is there a limit to how many lines I can sort?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For performance reasons, we recommend sorting lists up to 50,000 lines. The tool operates entirely within your browser, so performance depends on your computer's memory. For the vast majority of use cases, there is no effective limit."
+        }
+      },{
+        "@type": "Question",
+        "name": "How is this different from sorting in Excel or Google Sheets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "While spreadsheet programs are powerful, our tool is built for speed and simplicity. You don't need to open a large application or select columns. Just paste your text, and the sorted result appears instantly, ready to be copied. It's a faster workflow for quick sorting tasks."
+        }
+      }]
+    }
+    </script>
 </head>
 <body>
-    <!-- Body content is correct, no changes needed -->
     <main class="tool-container">
         <div class="tool-header">
             <h1>Sort Lines Alphabetically</h1>
             <p>Instantly arrange lines of text in your desired order.</p>
         </div>
+        <!-- ... your existing tool controls, io-container, action-bar etc. ... -->
         <div class="tool-controls">
             <input type="radio" id="sort-az" name="sort-order" value="asc" checked>
             <label for="sort-az">Sort A-Z (Ascending)</label>
@@ -46,10 +77,36 @@
             <a href="#" id="next-step-btn" class="next-step-btn"></a>
         </div>
     </main>
+
     <div class="content-section">
-        <h2>Real-Time Sorting</h2>
-        <p>This tool sorts your list as you type. Choose your desired order (A-Z or Z-A), and the output will update automatically. This is especially useful for quickly organizing keyword lists, names, or any other line-based data.</p>
+        <h2>About The Alphabetical Sorter</h2>
+        <p>This online **text sorter** allows you to instantly arrange any list of text into alphabetical or reverse-alphabetical order. It is perfect for organizing keyword lists, domain names, file lists, or any other line-based data. The tool uses a "natural sort" method, ensuring that numbers within your text are sorted logically (e.g., "Item 10" comes after "Item 2").</p>
+        
+        <h3>How to Use This Tool</h3>
+        <ol>
+            <li><strong>Paste Your List:</strong> Copy your text and paste it into the "Input" text area.</li>
+            <li><strong>Select Sort Order:</strong> Choose between "Sort A-Z" (ascending) or "Sort Z-A" (descending).</li>
+            <li><strong>View Instant Results:</strong> The sorted list will appear in the "Output" text area in real-time.</li>
+            <li><strong>Copy Your Sorted List:</strong> Click the "Copy Result" button to use your newly organized list.</li>
+        </ol>
+
+        <hr style="margin: 30px 0; border: 0; border-top: 1px solid #e9ecef;">
+
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        <div class="faq-item" style="margin-bottom: 20px;">
+            <h3>Does this tool sort numbers correctly?</h3>
+            <p><strong>Yes.</strong> Our tool uses a "natural sort" algorithm, which means it understands that "Item 10" should come after "Item 2", not before it. It correctly sorts lists that contain both text and numbers.</p>
+        </div>
+        <div class="faq-item" style="margin-bottom: 20px;">
+            <h3>Is there a limit to how many lines I can sort?</h3>
+            <p>For performance reasons, we recommend sorting lists up to 50,000 lines. The tool operates entirely within your browser, so performance depends on your computer's memory. For the vast majority of use cases, there is no effective limit.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How is this different from sorting in Excel or Google Sheets?</h3>
+            <p>While spreadsheet programs are powerful, our tool is built for speed and simplicity. You don't need to open a large application or select columns. Just paste your text, and the sorted result appears instantly, ready to be copied. It's a faster workflow for quick sorting tasks.</p>
+        </div>
     </div>
+
     <div id="copy-toast">Copied to clipboard!</div>
     <script src="../scripts/nav.js"></script>
     <script src="script.js"></script>

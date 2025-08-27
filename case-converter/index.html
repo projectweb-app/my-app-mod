@@ -3,18 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Converter - UPPERCASE, lowercase, etc. | MyAppMod</title>
-    <meta name="description" content="Easily convert text between UPPERCASE, lowercase, and Title Case. Our free online tool transforms your text instantly as you type.">
-    <!-- Updated CSS Link Below -->
+    <!-- SEO Optimized Meta Tags -->
+    <title>Online Case Converter - UPPERCASE, lowercase, Title Case | MyAppMod</title>
+    <meta name="description" content="Easily change text case online. Instantly convert any text to UPPERCASE, lowercase, or Title Case with our free and real-time case converter tool.">
+
     <link rel="stylesheet" href="../style.css?v=1.1">
+
+    <!-- FAQPage Schema for SEO Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "How does 'Title Case' work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our Title Case option capitalizes the first letter of every word in your text. This is commonly used for headlines and titles to ensure a consistent and professional look."
+        }
+      },{
+        "@type": "Question",
+        "name": "Will this tool change the case of file extensions or code?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The tool applies the selected case conversion to all text you provide. It does not distinguish between regular words and specific formats like code or file extensions. Always review the output to ensure it meets your needs."
+        }
+      },{
+        "@type": "Question",
+        "name": "Why is consistent text case important?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Consistent text case is crucial for data analysis, sorting, and database management. To a computer, 'Data', 'data', and 'DATA' can be treated as different values. Standardizing the case ensures that your data is clean, accurate, and easy to process."
+        }
+      }]
+    }
+    </script>
 </head>
 <body>
-    <!-- Body content is correct, no changes needed -->
     <main class="tool-container">
         <div class="tool-header">
             <h1>Case Converter</h1>
             <p>Instantly convert text to your desired case format.</p>
         </div>
+        <!-- ... your existing tool controls, io-container, action-bar etc. ... -->
         <div class="tool-controls">
             <input type="radio" id="uppercase" name="case" value="upper" checked>
             <label for="uppercase">UPPERCASE</label>
@@ -44,6 +75,35 @@
             <button id="clear-btn">Clear</button>
         </div>
     </main>
+
+    <div class="content-section">
+        <h2>About The Case Converter</h2>
+        <p>This **online case converter** is a tool for standardizing the capitalization of your text. In data processing and analysis, consistency is key. This utility allows you to quickly **change text case** to one of three common formats: UPPERCASE, lowercase, or Title Case, ensuring your data is uniform and easy to work with.</p>
+        
+        <h3>How to Use This Tool</h3>
+        <ol>
+            <li><strong>Paste Your Text:</strong> Place the text you want to convert into the "Input" area.</li>
+            <li><strong>Select a Case:</strong> Choose your desired format (UPPERCASE, lowercase, or Title Case) from the options above the text areas.</li>
+            <li><strong>See Instant Conversion:</strong> The text in the "Output" area will immediately update to reflect your chosen case.</li>
+        </ol>
+
+        <hr style="margin: 30px 0; border: 0; border-top: 1px solid #e9ecef;">
+
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        <div class="faq-item" style="margin-bottom: 20px;">
+            <h3>How does "Title Case" work?</h3>
+            <p>Our Title Case option capitalizes the first letter of every word in your text. This is commonly used for headlines and titles to ensure a consistent and professional look.</p>
+        </div>
+        <div class="faq-item" style="margin-bottom: 20px;">
+            <h3>Will this tool change the case of file extensions or code?</h3>
+            <p><strong>Yes.</strong> The tool applies the selected case conversion to all text you provide. It does not distinguish between regular words and specific formats like code or file extensions. Always review the output to ensure it meets your needs.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Why is consistent text case important?</h3>
+            <p>Consistent text case is crucial for data analysis, sorting, and database management. To a computer, "Data", "data", and "DATA" can be treated as different values. Standardizing the case ensures that your data is clean, accurate, and easy to process.</p>
+        </div>
+    </div>
+    
     <div id="copy-toast">Copied to clipboard!</div>
     <script src="../scripts/nav.js"></script>
     <script src="script.js"></script>

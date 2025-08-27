@@ -3,18 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Optimized Meta Tags -->
     <title>Add Prefix & Suffix to Lines - Free Online Tool | MyAppMod</title>
-    <meta name="description" content="Easily add text to the beginning (prefix) or end (suffix) of every line in a list. Our tool updates your text instantly as you type.">
-    <!-- Updated CSS Link Below -->
+    <meta name="description" content="Easily add text to the beginning (prefix) or end (suffix) of every line in a list. Our tool lets you prepend and append text to lines in bulk, instantly.">
+
     <link rel="stylesheet" href="../style.css?v=1.1">
+
+    <!-- FAQPage Schema for SEO Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Can I add only a prefix or only a suffix?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You can use either field independently. If you only want to add text to the beginning of each line, fill in the 'Prefix' field and leave the 'Suffix' field empty. If you only want to append text, do the opposite."
+        }
+      },{
+        "@type": "Question",
+        "name": "How does the tool handle empty lines in my list?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The tool is designed to ignore empty lines. The prefix and suffix will only be added to lines that contain text, ensuring that your list formatting is preserved."
+        }
+      },{
+        "@type": "Question",
+        "name": "What is a common use case for this tool?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A very common use case is for developers or marketers to modify lists of URLs. For example, you can paste a list of slugs (e.g., 'about-us', 'contact') and add the domain ('https://example.com/') as a prefix to generate a full list of absolute URLs."
+        }
+      }]
+    }
+    </script>
 </head>
 <body>
-    <!-- Body content is correct, no changes needed -->
     <main class="tool-container">
         <div class="tool-header">
             <h1>Add Prefix & Suffix to Lines</h1>
             <p>Add custom text to the beginning or end of every line in your list.</p>
         </div>
+        <!-- ... your existing ps-controls, io-container, action-bar etc. ... -->
         <div class="ps-controls">
             <div class="ps-input-group">
                 <label for="prefix-input">Prefix (Add to beginning)</label>
@@ -46,6 +77,35 @@
             <button id="clear-btn">Clear</button>
         </div>
     </main>
+
+    <div class="content-section">
+        <h2>About The Prefix & Suffix Tool</h2>
+        <p>This tool is designed for bulk text editing. It allows you to **add custom text to the beginning (prepend) or end (append) of every line** in your list simultaneously. This is a massive time-saver for repetitive tasks, such as formatting lists of URLs, product codes, or any other data that requires a uniform prefix or suffix.</p>
+        
+        <h3>How to Use This Tool</h3>
+        <ol>
+            <li><strong>Enter Prefix/Suffix:</strong> Type the text you want to add in the "Prefix" and/or "Suffix" fields above. You can use one or both.</li>
+            <li><strong>Paste Your List:</strong> Paste your list of text into the "Input" area.</li>
+            <li><strong>Get Real-Time Results:</strong> The "Output" area will instantly show your list with the prefix and/or suffix applied to every line.</li>
+        </ol>
+
+        <hr style="margin: 30px 0; border: 0; border-top: 1px solid #e9ecef;">
+
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        <div class="faq-item" style="margin-bottom: 20px;">
+            <h3>Can I add only a prefix or only a suffix?</h3>
+            <p><strong>Yes.</strong> You can use either field independently. If you only want to add text to the beginning of each line, fill in the "Prefix" field and leave the "Suffix" field empty. If you only want to append text, do the opposite.</p>
+        </div>
+        <div class="faq-item" style="margin-bottom: 20px;">
+            <h3>How does the tool handle empty lines in my list?</h3>
+            <p>The tool is designed to ignore empty lines. The prefix and suffix will only be added to lines that contain text, ensuring that your list formatting is preserved.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What is a common use case for this tool?</h3>
+            <p>A very common use case is for developers or marketers to modify lists of URLs. For example, you can paste a list of slugs (e.g., "about-us", "contact") and add the domain ("https://example.com/") as a prefix to generate a full list of absolute URLs.</p>
+        </div>
+    </div>
+
     <div id="copy-toast">Copied to clipboard!</div>
     <script src="../scripts/nav.js"></script>
     <script src="script.js"></script>
