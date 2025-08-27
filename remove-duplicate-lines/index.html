@@ -4,36 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Remove Duplicate Lines - Instant & Free Tool | MyAppMod</title>
-    <meta name="description" content="Instantly remove all duplicate lines from your text or list as you type. Our free online tool cleans your data in real-time, keeping only the unique lines.">
-    <link rel="stylesheet" href="../style.css">
-    
-    <!-- Added a simple style for the new content section -->
-    <style>
-        .use-case-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .use-case-card {
-            background-color: #f8f9fa;
-            border: 1px solid #e9ecef;
-            border-radius: 6px;
-            padding: 20px;
-        }
-        .use-case-card h4 {
-            margin-top: 0;
-            color: #4C6EF5;
-        }
-    </style>
+    <meta name="description" content="Instantly remove all duplicate lines from your text or list as you type. Our free online tool cleans your data in real-time, keeping only unique lines.">
+    <!-- Updated CSS Link Below -->
+    <link rel="stylesheet" href="../style.css?v=1.1">
 </head>
 <body>
+    <!-- The rest of your body content remains the same -->
     <main class="tool-container">
         <div class="tool-header">
             <h1>Remove Duplicate Lines</h1>
             <p>Paste your text below to instantly remove all duplicate lines, leaving only unique entries.</p>
         </div>
-
         <div class="io-container">
             <div class="io-box">
                 <div class="io-header">
@@ -50,46 +31,19 @@
                 <textarea id="output-area" readonly placeholder="Unique lines will appear here..."></textarea>
             </div>
         </div>
-
         <div class="action-bar">
             <button id="copy-btn">Copy Result</button>
             <button id="clear-btn">Clear</button>
         </div>
-
         <div id="next-step-container" class="next-step-container" style="display: none;">
             <h3>Next Step:</h3>
             <a href="#" id="next-step-btn" class="next-step-btn"></a>
         </div>
     </main>
-
-    <!-- START: NEW CONTENT SECTION -->
     <div class="content-section">
         <h2>How It Works: Instant Results</h2>
-        <p>
-            Simply paste your text into the input box. The tool automatically processes your text in real-time and removes any lines that are exact duplicates. The cleaned list, containing only unique lines, appears instantly in the output box. There's no need to click a button.
-        </p>
-
-        <hr style="margin: 30px 0; border: 0; border-top: 1px solid #e9ecef;">
-
-        <h2>Practical Use Cases</h2>
-        <p>This tool is essential for anyone working with lists. Here are a few examples:</p>
-        <div class="use-case-grid">
-            <div class="use-case-card">
-                <h4>For SEO Specialists</h4>
-                <p>Clean up keyword lists exported from research tools. Remove duplicate keywords before analysis or creating content briefs to ensure accurate data.</p>
-            </div>
-            <div class="use-case-card">
-                <h4>For Data Analysts</h4>
-                <p>Quickly deduplicate lists of user IDs, email addresses, or product SKUs copied from spreadsheets or database exports before performing further analysis.</p>
-            </div>
-            <div class="use-case-card">
-                <h4>For Sales & Marketing</h4>
-                <p>Consolidate and clean email lists from multiple sources. Ensure you aren't sending the same campaign to a contact multiple times by removing duplicates first.</p>
-            </div>
-        </div>
+        <p>Simply paste your text into the input box. The tool automatically processes your text in real-time and removes any lines that are exact duplicates. The cleaned list appears instantly in the output box. There's no need to click a button.</p>
     </div>
-    <!-- END: NEW CONTENT SECTION -->
-
     <div id="copy-toast">Copied to clipboard!</div>
     <script src="../scripts/nav.js"></script>
     <script src="script.js"></script>

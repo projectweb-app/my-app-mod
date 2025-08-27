@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sort Lines Alphabetically - Free Online Text Sorter | MyAppMod</title>
     <meta name="description" content="Quickly sort any list of text lines alphabetically (A-Z) or reverse-alphabetically (Z-A) with our simple, free online tool.">
-    <link rel="stylesheet" href="../style.css">
+    <!-- Updated CSS Link Below -->
+    <link rel="stylesheet" href="../style.css?v=1.1">
 </head>
 <body>
+    <!-- Body content is correct, no changes needed -->
     <main class="tool-container">
         <div class="tool-header">
             <h1>Sort Lines Alphabetically</h1>
             <p>Instantly arrange lines of text in your desired order.</p>
         </div>
-
         <div class="tool-controls">
             <input type="radio" id="sort-az" name="sort-order" value="asc" checked>
             <label for="sort-az">Sort A-Z (Ascending)</label>
             <input type="radio" id="sort-za" name="sort-order" value="desc">
             <label for="sort-za">Sort Z-A (Descending)</label>
         </div>
-
         <div class="io-container">
             <div class="io-box">
                 <div class="io-header">
@@ -37,23 +37,19 @@
                 <textarea id="output-area" readonly placeholder="Sorted lines will appear here..."></textarea>
             </div>
         </div>
-
         <div class="action-bar">
             <button id="copy-btn">Copy Result</button>
             <button id="clear-btn">Clear</button>
         </div>
-        
         <div id="next-step-container" class="next-step-container" style="display: none;">
             <h3>Next Step:</h3>
             <a href="#" id="next-step-btn" class="next-step-btn"></a>
         </div>
     </main>
-
     <div class="content-section">
         <h2>Real-Time Sorting</h2>
         <p>This tool sorts your list as you type. Choose your desired order (A-Z or Z-A), and the output will update automatically. This is especially useful for quickly organizing keyword lists, names, or any other line-based data.</p>
     </div>
-
     <div id="copy-toast">Copied to clipboard!</div>
     <script src="../scripts/nav.js"></script>
     <script src="script.js"></script>

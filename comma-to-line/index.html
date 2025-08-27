@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comma to Line Converter - Free Online Text Formatter | MyAppMod</title>
     <meta name="description" content="Instantly convert comma-separated values to new lines, and vice versa. Our free, simple online tool is perfect for data and text formatting.">
-    <link rel="stylesheet" href="../style.css">
+    <!-- Updated CSS Link Below -->
+    <link rel="stylesheet" href="../style.css?v=1.1">
 </head>
 <body>
+    <!-- Body content is correct, no changes needed -->
     <main class="tool-container">
         <div class="tool-header">
             <h1>Comma to Line Converter</h1>
             <p>Instantly reformat your list. Choose a conversion direction below.</p>
         </div>
-
         <div class="tool-controls">
             <input type="radio" id="to-lines" name="conversion" value="to-lines" checked>
             <label for="to-lines">Comma → New Lines</label>
             <input type="radio" id="to-commas" name="conversion" value="to-commas">
             <label for="to-commas">New Lines → Commas</label>
         </div>
-
         <div class="io-container">
             <div class="io-box">
                 <div class="io-header">
@@ -37,93 +37,21 @@
                 <textarea id="output-area" readonly placeholder="Your result appears here..."></textarea>
             </div>
         </div>
-        
         <div class="action-bar">
             <button id="copy-btn">Copy Result</button>
             <button id="clear-btn">Clear</button>
         </div>
-
         <div id="next-step-container" class="next-step-container" style="display: none;">
             <h3>Next Step:</h3>
             <a href="#" id="next-step-btn" class="next-step-btn"></a>
         </div>
     </main>
-
     <div class="content-section">
         <h2>Live Conversion</h2>
         <p>This tool works in real-time. Simply paste your text and select a conversion direction. The output is updated instantly, saving you time and clicks.</p>
     </div>
-
     <div id="copy-toast">Copied to clipboard!</div>
     <script src="../scripts/nav.js"></script>
     <script src="script.js"></script>
 </body>
-</html>```
-
-*   **File: `/comma-to-line/script.js`**
-
-```javascript
-document.addEventListener('DOMContentLoaded', () => {
-    const inputArea = document.getElementById('input-area');
-    const outputArea = document.getElementById('output-area');
-    const conversionControls = document.querySelectorAll('input[name="conversion"]');
-    const inputStats = document.getElementById('input-stats');
-    const outputStats = document.getElementById('output-stats');
-    const clearBtn = document.getElementById('clear-btn');
-    const copyBtn = document.getElementById('copy-btn');
-    const nextStepContainer = document.getElementById('next-step-container');
-    const nextStepBtn = document.getElementById('next-step-btn');
-
-    const processText = () => {
-        const mode = document.querySelector('input[name="conversion"]:checked').value;
-        const text = inputArea.value;
-        let inputItems = [];
-        let outputItems = [];
-
-        if (mode === 'to-lines') {
-            inputItems = text.split(',').map(item => item.trim()).filter(Boolean);
-            outputItems = inputItems;
-            outputArea.value = outputItems.join('\n');
-            inputArea.placeholder = 'item 1, item 2, item 3...';
-        } else {
-            inputItems = text.split('\n').map(item => item.trim()).filter(Boolean);
-            outputItems = inputItems;
-            outputArea.value = outputItems.join(', ');
-            inputArea.placeholder = 'item 1\nitem 2\nitem 3...';
-        }
-
-        inputStats.textContent = `Items: ${inputItems.length}`;
-        outputStats.textContent = `Items: ${outputItems.length}`;
-        toggleNextStep(outputItems.length > 0);
-    };
-
-    const toggleNextStep = (show) => {
-        if (show) {
-            nextStepBtn.textContent = 'Remove duplicate items from this list';
-            const data = encodeURIComponent(outputArea.value);
-            nextStepBtn.href = `../remove-duplicate-lines/?data=${data}`;
-            nextStepContainer.style.display = 'block';
-        } else {
-            nextStepContainer.style.display = 'none';
-        }
-    };
-
-    inputArea.addEventListener('input', processText);
-    conversionControls.forEach(radio => radio.addEventListener('change', processText));
-
-    clearBtn.addEventListener('click', () => {
-        inputArea.value = '';
-        processText();
-    });
-
-    copyBtn.addEventListener('click', () => {
-        if (!outputArea.value) return;
-        navigator.clipboard.writeText(outputArea.value).then(() => {
-            const copyToast = document.getElementById('copy-toast');
-            copyToast.classList.add('show');
-            setTimeout(() => copyToast.classList.remove('show'), 2000);
-        });
-    });
-    
-    processText(); // Initial run
-});
+</html>

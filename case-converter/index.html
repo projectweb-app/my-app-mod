@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case Converter - UPPERCASE, lowercase, etc. | MyAppMod</title>
     <meta name="description" content="Easily convert text between UPPERCASE, lowercase, and Title Case. Our free online tool transforms your text instantly as you type.">
-    <link rel="stylesheet" href="../style.css">
+    <!-- Updated CSS Link Below -->
+    <link rel="stylesheet" href="../style.css?v=1.1">
 </head>
 <body>
+    <!-- Body content is correct, no changes needed -->
     <main class="tool-container">
         <div class="tool-header">
             <h1>Case Converter</h1>
             <p>Instantly convert text to your desired case format.</p>
         </div>
-
         <div class="tool-controls">
             <input type="radio" id="uppercase" name="case" value="upper" checked>
             <label for="uppercase">UPPERCASE</label>
@@ -22,7 +23,6 @@
             <input type="radio" id="titlecase" name="case" value="title">
             <label for="titlecase">Title Case</label>
         </div>
-
         <div class="io-container">
             <div class="io-box">
                 <div class="io-header">
@@ -39,13 +39,11 @@
                 <textarea id="output-area" readonly placeholder="Converted text will appear here..."></textarea>
             </div>
         </div>
-
         <div class="action-bar">
             <button id="copy-btn">Copy Result</button>
             <button id="clear-btn">Clear</button>
         </div>
     </main>
-    
     <div id="copy-toast">Copied to clipboard!</div>
     <script src="../scripts/nav.js"></script>
     <script src="script.js"></script>
